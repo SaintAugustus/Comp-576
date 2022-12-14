@@ -1,0 +1,19 @@
+net = Net(101,500,500,200,100,20,1).cuda()   #GPU
+net.eval()
+
+optimizer = torch.optim.Adam(net.parameters(), lr=0.0001)#优化参数
+loss_func = torch.nn.MSELoss()
+
+for epoch in range(12000):
+
+train error is 0.02211995917217448
+test error is 0.014414277834201517
+
+
+net = NewNet(101,512,256,128,64,32,1).cuda()   #NewNet GPU
+net.eval()
+
+optimizer = torch.optim.Adam(net.parameters(), lr=0.0001)#优化参数
+
+train error is 0.018267114336045494
+test error is 0.0126406836846092
